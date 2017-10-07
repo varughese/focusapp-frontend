@@ -1,0 +1,44 @@
+<div class="has-button-bar">
+
+<h2>{{ member.firstname + " " + member.lastname }}</h2>
+
+<h4>
+    Events
+</h4>
+
+<div id="alert-wrapper"></div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Hours</th>
+            <th>Date</th>
+            <th>Checked?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="event in events">
+            <td>{{event.name}}</td>
+            <td>{{event.hours}}</td>
+            <td>{{event.date | date : 'M/d'}}</td>
+            <td>
+				<input ng-if="!event.checked" type="checkbox" ng-model="event.justChecked">
+			    <span ng-if="event.checked" class="glyphicon glyphicon-ok"></span>
+			</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td><strong>Total Hours:</strong></td>
+        <td><strong id="total-hours"></strong></td>
+        <td></td>
+        <td></td>
+    </tfoot>
+</table>
+
+</div>
+
+<div class="button-bar">
+    <button class="btn btn-default" ui-sref="memberList"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+    <button class="btn btn-primary pull-right" ng-click="saveChecks()">Save</button>
+</div>
