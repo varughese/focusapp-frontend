@@ -2286,7 +2286,7 @@ td, th {
   overflow: hidden;
   position: relative; }
   .collection .collection-item {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.31);
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -2332,7 +2332,7 @@ td, th {
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.31);
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px; }
   .collection.with-header .collection-item {

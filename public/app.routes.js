@@ -18,6 +18,10 @@ angular.module('focusapp')
 		.state("landing", {
             url: "/landing",
             templateUrl: "templates/landing.html"
+        })
+		.state("historylist", {
+            url: "/historylist",
+            templateUrl: "templates/historylist.html"
         });
 }])
 

@@ -16,7 +16,12 @@ h1, h2, h3, h4, h5, h6 {
   .topbar .topbar-buttons {
     margin-top: 5px; }
     .topbar .topbar-buttons i.material-icons {
-      cursor: pointer; }
+      cursor: pointer;
+      user-select: none; }
+      .topbar .topbar-buttons i.material-icons:hover {
+        color: #3a5265; }
+      .topbar .topbar-buttons i.material-icons:active {
+        color: #151d24; }
 
 footer {
   display: flex;
@@ -101,6 +106,11 @@ main.container {
       font-size: 3em; }
     .goal-block-container .goal-block .h-title-size-small {
       font-size: 2em; }
+
+.collection {
+  overflow-y: scroll; }
+  .collection .circle {
+    border-radius: 0%; }
 
 @media screen and (max-width: 800px) {
   .goal-block-container .goal-block .h-title-size-lg {

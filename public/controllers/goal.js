@@ -36,4 +36,11 @@ angular.module('focusapp')
 }])
 
 
+.controller('goalHistory', ['$scope', "$state", "$rootScope", '$stateParams', 'Goal', function($scope, $state, $rootScope, $stateParams, Goal){
+
+	$scope.goals = $rootScope.goals;
+
+}])
+
+
 ;

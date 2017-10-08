@@ -16,8 +16,8 @@ angular.module('focusapp')
     Goal.all()
         .then(function(goals) {
 			console.log(goals);
-			$scope.goals = goals.goals;
-			$rootScope.currentGoal = $scope.goals[0];
+			$rootScope.goals = goals.goals;
+			$rootScope.currentGoal = $rootScope.goals[0];
         });
 
     // UpcomingEvent.all()
