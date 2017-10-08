@@ -2,14 +2,23 @@ angular.module('focusapp')
 
 .controller('dashboard', ['$scope', "$state", "$rootScope", "Goal", "$timeout", "$sce", function($scope, $state, $rootScope, Goal, $timeout, $sce){
     $scope.goals = [];
+	$rootScope.weeknum = getWeekNum();
+
+	function getWeekNum() {
+		var d = new Date();
+		var dayNum = d.getUTCDay() || 7;
+		d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+		var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+		return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+	}
+
 
     Goal.all()
         .then(function(goals) {
 			console.log(goals);
 			$scope.goals = goals.goals;
+			$scope.currentGoal = $scope.goals[0];
         });
-
-
 
     // UpcomingEvent.all()
     //     .then(function(upcoming) {

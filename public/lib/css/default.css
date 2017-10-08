@@ -1,0 +1,60 @@
+html, body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.topbar {
+  margin: 1.2em;
+  display: flex;
+  justify-content: center; }
+  .topbar .topbar-info .week {
+    font-size: 1.1em; }
+
+body {
+  background: #159957;
+  background: -webkit-linear-gradient(to right, #159957, #155799);
+  background: linear-gradient(to right, #159957, #155799);
+  color: #fff;
+  display: flex;
+  flex-direction: column; }
+
+main.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column; }
+  main.container [ui-view] {
+    display: flex;
+    height: 100%;
+    flex-direction: column; }
+
+.topbar .topbar-info h2 {
+  font-size: 2em; }
+
+.goal-block-container .goal-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 20px 10px; }
+  .goal-block-container .goal-block.goal-block-focus {
+    margin-top: 0;
+    background: rgba(74, 74, 74, 0.64);
+    margin-left: -15px;
+    margin-right: -25px;
+    padding-left: 25px; }
+  .goal-block-container .goal-block .header {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid rgba(17, 93, 105, 0.58);
+    margin-bottom: 8px; }
+  .goal-block-container .goal-block .h-title {
+    line-height: 1em; }
+    .goal-block-container .goal-block .h-title-size-lg {
+      font-size: 5em; }
+    .goal-block-container .goal-block .h-title-size-med {
+      font-size: 3em; }
+    .goal-block-container .goal-block .h-title-size-small {
+      font-size: 2em; }
+
+/*# sourceMappingURL=default.css.map */
