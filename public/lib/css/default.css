@@ -123,6 +123,9 @@ main.container {
       font-style: italic; }
 
 @media screen and (max-width: 800px) {
+  footer {
+    display: none; }
+
   .goal-block-container .goal-block .h-title-size-lg {
     font-size: 2.5em; }
   .goal-block-container .goal-block .h-title-size-med {
