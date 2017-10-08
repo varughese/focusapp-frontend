@@ -111,6 +111,16 @@ main.container {
   overflow-y: scroll; }
   .collection .circle {
     border-radius: 0%; }
+  .collection .collection-header {
+    padding: 10px; }
+  .collection .collection-item.avatar .title {
+    color: #0bff83; }
+  .collection div {
+    margin-top: 10px; }
+    .collection div span {
+      font-weight: bold; }
+    .collection div .text-section {
+      font-style: italic; }
 
 @media screen and (max-width: 800px) {
   .goal-block-container .goal-block .h-title-size-lg {
