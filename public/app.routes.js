@@ -10,20 +10,10 @@ angular.module('focusapp')
             templateUrl: "templates/dashboard.html",
             controller: "dashboard"
         })
-        .state("event", {
-            url: "/event",
-            template: "<div ui-view></div>",
-            abstract: true
-        })
-        .state("event.create", {
-            url: "/create",
-            templateUrl: "templates/event.html",
-            controller: "eventCreate"
-        })
-        .state("event.edit", {
-            url: "/edit/:eventID",
-            templateUrl: "templates/event.html",
-            controller: "eventEdit"
+		.state("editgoal", {
+            url: "/editgoal",
+            templateUrl: "templates/goalofweek.html",
+			controller: "goalEdit"
         })
         ;
 }])

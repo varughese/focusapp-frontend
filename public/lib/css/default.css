@@ -7,9 +7,16 @@ h1, h2, h3, h4, h5, h6 {
 .topbar {
   margin: 1.2em;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   justify-content: center; }
   .topbar .topbar-info .week {
     font-size: 1.1em; }
+  .topbar .topbar-buttons {
+    margin-top: 5px; }
+    .topbar .topbar-buttons i.material-icons {
+      cursor: pointer; }
 
 footer {
   display: flex;

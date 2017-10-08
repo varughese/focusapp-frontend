@@ -30,6 +30,11 @@ angular.module('focusapp')
 
         });
 
+		$rootScope.editGoal = function() {
+			console.log("asd");
+			$state.go("editgoal");
+		};
+
         $scope.logout = function() {
             Auth.logout();
             $rootScope.user = {};
