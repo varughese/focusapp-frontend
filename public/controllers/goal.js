@@ -15,9 +15,10 @@ angular.module('focusapp')
 // }])
 
 .controller('goalEdit', ['$scope', "$state", "$rootScope", '$stateParams', 'Goal', function($scope, $state, $rootScope, $stateParams, Goal){
-    console.log('asdfds');
 
-    $scope.saveEvent = function(){
+	$scope.goaljawn = $rootScope.currentGoal;
+	var goalID = $scope.goaljawn._id;
+    $scope.update = function(){
         Goal.update(goalID, $scope.goalData)
             .then(function() {
                 // $state.go("dashboard");

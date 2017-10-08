@@ -15,7 +15,10 @@ angular.module('focusapp')
             templateUrl: "templates/goalofweek.html",
 			controller: "goalEdit"
         })
-        ;
+		.state("landing", {
+            url: "/landing",
+            templateUrl: "templates/landing.html"
+        });
 }])
 
 
