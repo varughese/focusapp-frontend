@@ -11,6 +11,26 @@ h1, h2, h3, h4, h5, h6 {
   .topbar .topbar-info .week {
     font-size: 1.1em; }
 
+footer {
+  display: flex;
+  justify-content: center; }
+  footer .logos {
+    display: flex;
+    flex-direction: row; }
+    footer .logos img {
+      filter: grayscale(100%);
+      opacity: 0.4; }
+      footer .logos img:hover {
+        opacity: 1;
+        cursor: pointer;
+        filter: grayscale(0%); }
+    footer .logos .khe-logo img {
+      width: 100px; }
+    footer .logos .pitt-logo img {
+      width: 70px;
+      margin-bottom: 8px;
+      margin-right: 8px; }
+
 body {
   background: #159957;
   background: -webkit-linear-gradient(to right, #159957, #155799);
@@ -31,10 +51,14 @@ main.container {
 .topbar .topbar-info h2 {
   font-size: 2em; }
 
+.goal-block-container .edit-btn {
+  position: absolute;
+  right: 0; }
 .goal-block-container .goal-block {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  position: relative;
   padding: 20px 10px; }
   .goal-block-container .goal-block.goal-block-focus {
     margin-top: 0;
@@ -56,5 +80,13 @@ main.container {
       font-size: 3em; }
     .goal-block-container .goal-block .h-title-size-small {
       font-size: 2em; }
+
+@media screen and (max-width: 800px) {
+  .goal-block-container .goal-block .h-title-size-lg {
+    font-size: 2.5em; }
+  .goal-block-container .goal-block .h-title-size-med {
+    font-size: 2em; }
+  .goal-block-container .goal-block .h-title-size-sm {
+    font-size: 1.4em; } }
 
 /*# sourceMappingURL=default.css.map */
