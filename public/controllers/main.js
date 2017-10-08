@@ -1,6 +1,6 @@
 angular.module('focusapp')
 
-    .controller('main', ['$scope', '$rootScope', '$state', 'Auth', function($scope, $rootScope, $state, Auth) {
+    .controller('main', ['$scope', '$rootScope', '$state', 'Goal', function($scope, $rootScope, $state, Goal) {
         $rootScope.user = $rootScope.user || {};
 
         $scope.getState = function() {
@@ -37,14 +37,17 @@ angular.module('focusapp')
 		$rootScope.history = function() {
 			$state.go("historylist");
 		};
+		$rootScope.weeknum = getWeekNum();
+
+		function getWeekNum() {
+			var d = new Date();
+			var dayNum = d.getUTCDay() || 7;
+			d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+			var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+			return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+		}
 
 
-        $scope.logout = function() {
-            Auth.logout();
-            $rootScope.user = {};
-            $rootScope.user.loggedIn = false;
-            $state.go("login");
-            location.reload(true);
-        };
+
 
     }]);

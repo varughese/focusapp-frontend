@@ -18,11 +18,17 @@ angular.module('focusapp')
 
 	$scope.goaljawn = $rootScope.currentGoal;
 	var goalID = $scope.goaljawn._id;
+
     $scope.update = function(){
-        Goal.update(goalID, $scope.goalData)
-            .then(function() {
-                // $state.go("dashboard");
-            });
+		var p;
+		if(goalID) {
+			p = Goal.update(goalID, $scope.goaljawn);
+		} else {
+			p = Goal.create($scope.goaljawn);
+		}
+		p.then(function() {
+			$state.go("dashboard");
+		});
     };
 
     $scope.deleteEvent = function(){
@@ -40,6 +46,13 @@ angular.module('focusapp')
 
 	$scope.goals = $rootScope.goals;
 
+	if(!$scope.goals) {
+		Goal.all()
+			.then(function(goals) {
+				console.log(goals);
+				$scope.goals = goals.goals;
+			});
+	}
 }])
 
 
